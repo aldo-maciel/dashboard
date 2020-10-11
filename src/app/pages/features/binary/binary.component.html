@@ -1,0 +1,52 @@
+<div class="binary">
+  <h1 class="binary-title">Binário</h1>
+  <div class="binary-control">
+    <form #form="ngForm" fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="1rem" fxFlex (ngSubmit)="save()">
+      <app-input
+        fxFlex
+        name="operador"
+        label="Operador"
+        placeholder="digite um valor"
+        type="number"
+        [pattern]="'[0-1]*'"
+        [required]="true"
+        [(ngModel)]="record.operador">
+      </app-input>
+
+      <app-select
+        fxFlex
+        name="operacao"
+        label="Operação"
+        [required]="true"
+        [options]="operations"
+        [(ngModel)]="record.operacao">
+      </app-select>
+
+      <app-input
+        fxFlex
+        name="divisor"
+        label="Divisor"
+        placeholder="digite um valor"
+        type="number"
+        [pattern]="'[0-1]*'"
+        [required]="true"
+        [(ngModel)]="record.divisor">
+      </app-input>
+
+      <button
+        type="submit"
+        mat-button
+        color="primary"
+        [disabled]="form.invalid">
+        Enviar
+      </button>
+    </form>
+  </div>
+  <div class="binary-content">
+    <fieldset>
+      <legend>Resultados</legend>
+      <div *ngIf="!results.length">Nenhum resultado encontrado!</div>
+      <div *ngFor="let result of results" [innerHTML]="result"></div>
+    </fieldset>
+  </div>
+</div>
