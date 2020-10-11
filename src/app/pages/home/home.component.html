@@ -1,0 +1,90 @@
+<div class="panel home">
+  <mat-card class="home-chart">
+    <mat-card-header>
+      <mat-card-title>Dashboard</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <canvas ngChartjs
+              chartType="line"
+              [datasets]="charts.lineChartData"
+              [labels]="charts.lineChartLabels"
+              [options]="charts.lineChartOptions"
+              [legend]="charts.lineChartLegend"
+              [inlinePlugins]="inlinePlugin">
+      </canvas>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="home-chart">
+    <mat-card-header>
+      <mat-card-title>Dashboard</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <canvas ngChartjs
+              chartType="bar"
+              [datasets]="charts.lineChartData"
+              [labels]="charts.lineChartLabels"
+              [options]="charts.lineChartOptions"
+              [legend]="charts.lineChartLegend"
+              [inlinePlugins]="inlinePlugin">
+      </canvas>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="home-chart">
+    <mat-card-header>
+      <mat-card-title>Dashboard</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <canvas ngChartjs
+              chartType="doughnut"
+              [data]="charts.doughnutChartData"
+              [labels]="charts.doughnutChartLabels">
+      </canvas>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="home-chart">
+    <mat-card-header>
+      <mat-card-title>Dashboard</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <canvas ngChartjs
+              chartType="radar"
+              [datasets]="charts.radarChartData"
+              [options]="charts.radarChartOptions"
+              [labels]="charts.radarChartLabels">
+      </canvas>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="home-chart">
+    <mat-card-header>
+      <mat-card-title>Dashboard</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <canvas ngChartjs
+              chartType="pie"
+              [data]="charts.pieChartData"
+              [labels]="charts.pieChartLabels"
+              [options]="charts.pieChartOptions"
+              [colors]="charts.pieChartColors"
+              [legend]="charts.pieChartLegend">
+      </canvas>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="home-chart">
+    <mat-card-header>
+      <mat-card-title>Dashboard</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <canvas ngChartjs
+              chartType="polarArea"
+              [data]="charts.polarAreaChartData"
+              [labels]="charts.polarAreaChartLabels"
+              [legend]="charts.polarAreaLegend">
+      </canvas>
+    </mat-card-content>
+  </mat-card>
+</div>
