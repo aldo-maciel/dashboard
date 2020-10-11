@@ -1,0 +1,54 @@
+<nav class="header">
+  <ul class="header-items">
+    <li
+      class="header-item"
+      routerLink="/home">
+      <img src="assets/icon.svg" alt="home company icon"/>
+    </li>
+    <li
+      class="header-item"
+      routerLink="/binary"
+      routerLinkActive="header-item-active">
+      <mat-icon aria-hidden="false" aria-label="binary icon">money</mat-icon>
+      Binário
+    </li>
+    <li
+      class="header-item"
+      routerLink="/unique-element"
+      routerLinkActive="header-item-active">
+      <mat-icon aria-hidden="false" aria-label="unique element icon">repeat_one</mat-icon>
+      Elemento único
+    </li>
+    <li
+      class="header-item"
+      routerLinkActive="header-item-active">
+      <mat-icon aria-hidden="false" aria-label="register element icon">perm_media</mat-icon>
+      Cadastros
+    </li>
+    <li
+      class="header-item"
+      routerLinkActive="header-item-active">
+      <mat-icon aria-hidden="false" aria-label="settings element icon">settings</mat-icon>
+      Configurações
+    </li>
+  </ul>
+  <div class="header-content">
+    <div class="position-relative text-center">
+      <button mat-button [matMenuTriggerFor]="menu">
+        Fulano da silva
+        <mat-icon aria-hidden="false" aria-label="User avatar icon">face</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <button mat-button>Item 1</button>
+        </button>
+        <button mat-menu-item>
+          <button mat-button>Item 2</button>
+        </button>
+        <button mat-menu-item>
+          <button mat-button color="warn">Logout</button>
+        </button>
+      </mat-menu>
+    </div>
+  </div>
+</nav>

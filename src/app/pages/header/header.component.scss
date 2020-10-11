@@ -1,0 +1,51 @@
+@import "src/variable";
+
+.header {
+  align-items: center;
+  display: flex;
+  padding: .5rem;
+
+  &-items {
+    align-items: center;
+    display: flex;
+
+    ul li {
+      padding: 1rem;
+    }
+
+    img {
+      width: 3.5rem;
+      height: 3.5rem;
+      margin: 0 1rem 0 3rem;
+    }
+  }
+
+  &-item {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+
+    mat-icon {
+      margin-right: .250rem;
+    }
+
+    &:hover {
+      color: $blue;
+    }
+
+    &-active,
+    &-active:hover {
+      color: $gray-600;
+    }
+  }
+
+  &-content {
+    align-items: center;
+    display: flex;
+    flex: auto;
+    justify-content: flex-end;
+    padding: 0 1rem;
+  }
+}
