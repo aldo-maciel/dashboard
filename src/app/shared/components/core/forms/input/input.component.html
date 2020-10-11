@@ -1,0 +1,24 @@
+<div class="input">
+  <mat-form-field appearance="legacy">
+    <mat-label class="input-label" *ngIf="!!text">{{ text }}</mat-label>
+    <input
+      matInput
+      #inputElement
+      *ngIf="type !== 'date'"
+      class="form-control input-field"
+      [ngModelOptions]="{standalone: true}"
+      [disabled]="disabled"
+      [name]="name"
+      [max]="max"
+      [maxLength]="maxLength"
+      [type]="type"
+      [required]="required"
+      [placeholder]="placeholder"
+      [autocomplete]="autocomplete"
+      [(ngModel)]="value"
+      (blur)="onBlur()"
+      (keydown)="onKeydown($event)"
+      (change)="change()"
+    >
+  </mat-form-field>
+</div>
