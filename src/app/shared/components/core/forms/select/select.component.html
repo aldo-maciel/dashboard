@@ -1,0 +1,19 @@
+<div class="select" [ngClass]="{'disabled': disabled}">
+  <mat-form-field appearance="legacy">
+    <mat-label class="select-label">{{ text }}</mat-label>
+    <mat-select
+      class="form-control select-field"
+      [id]="id"
+      [name]="name"
+      [required]="required"
+      [disabled]="disabled"
+      [ngModel]="value"
+      (blur)="onBlur()"
+      (ngModelChange)="onSelectChange($event)"
+    >
+      <mat-option *ngFor="let option of options" [value]="option.value">
+        {{option.desc}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

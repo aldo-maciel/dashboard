@@ -1,0 +1,27 @@
+@import 'src/variable';
+
+.select {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  min-width: max-content;
+  position: relative;
+
+  &-label {
+    line-height: 120%;
+    padding: .2rem .4rem;
+  }
+
+  &.disabled::after {
+    border-color: $gray-400;
+  }
+
+  &:not(.disabled):active::after {
+    transform: rotateZ(225deg);
+  }
+
+  &-label {
+    line-height: 120%;
+    padding: .2rem .4rem;
+  }
+}
